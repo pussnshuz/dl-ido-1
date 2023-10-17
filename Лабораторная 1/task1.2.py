@@ -1,4 +1,11 @@
 # TODO Найдите количество книг, которое можно разместить на дискете
-V_in_byte = 1.44*(1024**2)
-one_book = 4*25*50*100
-print("Количество книг, помещающихся на дискету:", int(V_in_byte//one_book))
+diskette_size = 1.44
+page_count = 100
+lines = 50
+symbols = 25
+one_symbol = 4
+mb_in_kb, byte_in_kb = 1024, 1024
+diskette_size_in_byte = diskette_size*byte_in_kb*mb_in_kb
+one_book = one_symbol*symbols*lines*page_count
+books = round(diskette_size_in_byte//one_book)
+print("Количество книг, помещающихся на дискету:", books)
