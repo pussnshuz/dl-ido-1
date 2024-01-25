@@ -70,12 +70,3 @@ class AudioBook(Book):
 
     def __repr__(self):
         return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r}, duration={self.duration!r})"
-
-
-book1 = AudioBook('name1', 'aut1', 22)
-book2 = PaperBook('name2', 'aut2', 23)
-print(book2.__str__())
-print(book2.__repr__())
-book3 = Book('name3', 'aut3')
-print(book3.__str__())
-print(book3.__repr__())
